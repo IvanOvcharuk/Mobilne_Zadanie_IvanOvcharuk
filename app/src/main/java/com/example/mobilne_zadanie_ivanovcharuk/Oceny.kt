@@ -15,6 +15,8 @@ class Oceny : AppCompatActivity() {
         setContentView(R.layout.activity_oceny)
 
         supportActionBar?.hide()
+        val navigationView = findViewById<NavigationView>(R.id.nav_view)
+        navigationView.visibility = View.VISIBLE
 
         findViewById<Button>(R.id.btnwyjdz).setOnClickListener {
             val navigationView = findViewById<NavigationView>(R.id.nav_view)
