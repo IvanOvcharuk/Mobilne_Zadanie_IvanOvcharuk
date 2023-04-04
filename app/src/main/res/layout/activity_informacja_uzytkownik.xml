@@ -25,6 +25,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <ImageView
+            android:id="@+id/icon"
             android:layout_width="69dp"
             android:layout_height="match_parent"
             android:src="@drawable/iconmenu" />
@@ -84,6 +85,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/strgl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -93,6 +95,7 @@
 
 
         <Button
+            android:id="@+id/oceny"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -101,6 +104,7 @@
             app:cornerRadius="20dp" />
 
         <Button
+            android:id="@+id/inf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -109,6 +113,7 @@
             app:cornerRadius="20dp" />
 
         <Button
+            android:id="@+id/btnwyjdz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
