@@ -15,14 +15,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val tablicaV2 = intent.getStringArrayExtra("Przeniesiono")
+        var zalogowano = false
+        var tablica = arrayOf("","","","")
+        if (tablicaV2!= null){
+            zalogowano=true
+            tablica = tablicaV2
 
+            findViewById<EditText>(R.id.imie).visibility= View.GONE
+            findViewById<EditText>(R.id.nazwisko).visibility= View.GONE
+            findViewById<EditText>(R.id.klasa).visibility= View.GONE
+            findViewById<EditText>(R.id.nick).visibility= View.GONE
+        }
         supportActionBar?.hide()
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.visibility = View.VISIBLE
-
-        var zalogowano = false
-        var tablica = arrayOf("","","","")
-
 
         findViewById<Button>(R.id.btnwyjdz).setOnClickListener {
             navigationView.visibility = View.GONE
