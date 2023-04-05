@@ -6,10 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.162">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/imie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Imie" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.451">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/klasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Klasa" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -26,6 +59,7 @@
 
         <ImageView
             android:id="@+id/icon"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -124,5 +158,50 @@
             app:cornerRadius="20dp" />
 
     </com.google.android.material.navigation.NavigationView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.305">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nazwisko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nazwisko" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.594">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nick" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/wyslij"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WYSLIJ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.807" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
