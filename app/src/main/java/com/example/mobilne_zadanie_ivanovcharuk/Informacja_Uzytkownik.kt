@@ -15,11 +15,11 @@ class Informacja_Uzytkownik : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacja_uzytkownik)
 
-        val tablica = intent.getStringArrayExtra("Przeniesiono")
+        val tablica = intent.getStringArrayExtra("Przerzucanie")
 
         supportActionBar?.hide()
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        navigationView.visibility = View.VISIBLE
+        navigationView.visibility = View.GONE
 
         findViewById<Button>(R.id.btnwyjdz).setOnClickListener {
             navigationView.visibility = View.GONE
@@ -47,8 +47,8 @@ class Informacja_Uzytkownik : AppCompatActivity() {
         }
 
         findViewById<TextView>(R.id.imieid).text = "Imie: " + tablica?.get(0)
-        findViewById<TextView>(R.id.imieid).text = "Nazwisko: " + tablica?.get(1)
-        findViewById<TextView>(R.id.imieid).text = "Klasa: " + tablica?.get(2)
-        findViewById<TextView>(R.id.imieid).text = "Nick: " + tablica?.get(3)
+        findViewById<TextView>(R.id.nazwiskoid).text = "Nazwisko: " + tablica?.get(1)
+        findViewById<TextView>(R.id.klasaid).text = "Klasa: " + tablica?.get(2)
+        findViewById<TextView>(R.id.nickid).text = "Nick: " + tablica?.get(3)
     }
 }

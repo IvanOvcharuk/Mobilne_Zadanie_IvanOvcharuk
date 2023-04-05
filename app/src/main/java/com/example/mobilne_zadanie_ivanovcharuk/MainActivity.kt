@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 
@@ -15,21 +16,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val tablicaV2 = intent.getStringArrayExtra("Przeniesiono")
+        val tablicaV2 = intent.getStringArrayExtra("Przerzucanie")
         var zalogowano = false
         var tablica = arrayOf("","","","")
         if (tablicaV2!= null){
             zalogowano=true
             tablica = tablicaV2
 
-            findViewById<EditText>(R.id.imie).visibility= View.GONE
-            findViewById<EditText>(R.id.nazwisko).visibility= View.GONE
-            findViewById<EditText>(R.id.klasa).visibility= View.GONE
-            findViewById<EditText>(R.id.nick).visibility= View.GONE
+            findViewById<LinearLayout>(R.id.Formularz).visibility= View.GONE
         }
         supportActionBar?.hide()
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        navigationView.visibility = View.VISIBLE
+        navigationView.visibility = View.GONE
 
         findViewById<Button>(R.id.btnwyjdz).setOnClickListener {
             navigationView.visibility = View.GONE
@@ -79,10 +77,7 @@ class MainActivity : AppCompatActivity() {
                 tablica[2] = klasa
                 tablica[3] = nick
 
-                findViewById<EditText>(R.id.imie).visibility= View.GONE
-                findViewById<EditText>(R.id.nazwisko).visibility= View.GONE
-                findViewById<EditText>(R.id.klasa).visibility= View.GONE
-                findViewById<EditText>(R.id.nick).visibility= View.GONE
+                findViewById<LinearLayout>(R.id.Formularz).visibility= View.GONE
 
                 Toast.makeText(this, "Zalogowano!", Toast.LENGTH_SHORT).show()
 

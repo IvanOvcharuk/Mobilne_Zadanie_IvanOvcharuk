@@ -14,11 +14,11 @@ class Oceny : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oceny)
 
-        val tablica = intent.getStringArrayExtra("Przeniesiono")
+        val tablica = intent.getStringArrayExtra("Przerzucanie")
 
         supportActionBar?.hide()
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        navigationView.visibility = View.VISIBLE
+        navigationView.visibility = View.GONE
 
         findViewById<Button>(R.id.btnwyjdz).setOnClickListener {
             navigationView.visibility = View.GONE
