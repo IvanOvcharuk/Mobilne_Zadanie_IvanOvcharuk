@@ -14,6 +14,8 @@ class Oceny : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oceny)
 
+        val tablica = intent.getStringArrayExtra("Przeniesiono")
+
         supportActionBar?.hide()
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.visibility = View.VISIBLE
@@ -30,7 +32,7 @@ class Oceny : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.strgl).setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java).putExtra("Przerzucanie", tablica))
         }
 
 
@@ -40,7 +42,7 @@ class Oceny : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.inf).setOnClickListener {
-            startActivity(Intent(this,Informacja_Uzytkownik::class.java))
+            startActivity(Intent(this,Informacja_Uzytkownik::class.java).putExtra("Przerzucanie", tablica))
         }
     }
 }

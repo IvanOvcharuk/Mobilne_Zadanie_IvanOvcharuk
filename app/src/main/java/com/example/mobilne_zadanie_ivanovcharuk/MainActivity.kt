@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         supportActionBar?.hide()
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.visibility = View.VISIBLE
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.oceny).setOnClickListener {
             if(zalogowano==true)
-                startActivity(Intent(this, Oceny::class.java))
+                startActivity(Intent(this, Oceny::class.java).putExtra("Przerzucanie", tablica))
             else
                 Toast.makeText(this, "Musisz się zalogować", Toast.LENGTH_SHORT).show()
         }
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.inf).setOnClickListener {
             if(zalogowano==true)
-                startActivity(Intent(this,Informacja_Uzytkownik::class.java))
+                startActivity(Intent(this,Informacja_Uzytkownik::class.java).putExtra("Przerzucanie", tablica))
             else
                 Toast.makeText(this, "Musisz się zalogować", Toast.LENGTH_SHORT).show()
 
@@ -79,8 +80,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Zalogowano!", Toast.LENGTH_SHORT).show()
 
             }
-
-
         }
 
 
