@@ -19,13 +19,11 @@ class Informacja_Uzytkownik : AppCompatActivity() {
         navigationView.visibility = View.VISIBLE
 
         findViewById<Button>(R.id.btnwyjdz).setOnClickListener {
-            val navigationView = findViewById<NavigationView>(R.id.nav_view)
             navigationView.visibility = View.GONE
         }
 
 
         findViewById<ImageView>(R.id.icon).setOnClickListener {
-            val navigationView = findViewById<NavigationView>(R.id.nav_view)
             navigationView.visibility = View.VISIBLE
         }
 
