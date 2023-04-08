@@ -46,8 +46,8 @@ class Informacja_Uzytkownik : AppCompatActivity() {
             Toast.makeText(this, "Informacja jest już otwarta", Toast.LENGTH_SHORT).show()
         }
 
-        findViewById<TextView>(R.id.imieid).text = "Imie: " + tablica?.get(0)
-        findViewById<TextView>(R.id.nazwiskoid).text = "Nazwisko: " + tablica?.get(1)
+        findViewById<TextView>(R.id.imieid).text = tablica?.get(0)
+        findViewById<TextView>(R.id.nazwiskoid).text = tablica?.get(1)
         findViewById<TextView>(R.id.klasaid).text = "Klasa: " + tablica?.get(2)
         findViewById<TextView>(R.id.nickid).text = "Nick: " + tablica?.get(3)
     }
